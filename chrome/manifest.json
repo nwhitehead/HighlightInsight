@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "ShareConversation",
+    "minimum_chrome_version": "93",
+    "description": "Share your ChatGPT conversations",
+    "version": "1.4",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "images/logo-128.png"
+    },
+    "icons": {
+        "16": "images/logo-16.png",
+        "32": "images/logo-32.png",
+        "48": "images/logo-48.png",
+        "128": "images/logo-128.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://chat.openai.com/*"],
+          "js": ["chrome/index.js"],
+          "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "chrome/background.js",
+        "type": "module"
+    },
+    "permissions": [
+        "storage", "identity"
+    ],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAumevz87I7JIUvOYuJx32gDKdeiVRkZuayGjKcEe8uIEIRu4E/fnAJ2/M1zwJ8O0aZDK0lMejMKVxeanTZKRtOy9yPG4JeZX7OTFcuIsMv1ADtp6lu38RHmD56/ebPUeqjOiROfqsTDJRyWOf5E3/ZQLXH4+YzTtkadTk4AM+inYBKvFxGUjuKF1LZwBvV7zSyFYYg5Yijv/yFgWoJbeWpRciRtYzzDuFk9xj9pV2Ypbvz/O3GUtupdOklCkrizXIH1CippJIndxt4Ok9lTzS67cOvMxNxo1hTdE3FkYKGLMwkwp3A/NrPiEITqBtCu9EmNoeaiVNOKFtK2tj3gYWmQIDAQAB",
+    "oauth2": {
+        "client_id": "188075293614-ufu933v3duhro6d8hp1t2pnvc3evkcbq.apps.googleusercontent.com",
+        "scopes": ["openid"]
+    }
+}
