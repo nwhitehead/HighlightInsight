@@ -1,12 +1,20 @@
 <script setup>
 
 import { onMounted, ref, reactive } from 'vue';
+import { configuration} from './globals';
 
-const configuration = storageBacked('config',
-    reactive({
-        'context': true,
-    })
-);
+async function handleConfig(button) {
+    console.log('selection', selection);
+    const msg = await chrome.runtime.sendMessage({type: "get_configuration"});
+    console.log('msg', msg);
+}
+
+async function handleClick() {
+    console.log('click');
+    const [tab] = await chrome.tabs.query({active:true, lastFocusedWindow:true});
+    const response = await chrome.tabs.sendMessage(tab.id, {method: "get_selection"});
+    console.log('Got selection in popup of', response);
+}
 
 </script>
 
@@ -46,5 +54,6 @@ span.note {
                 </label>
             </div>
         </fieldset>
+        <button class="btn-blue" @click="handleClick">Get commentary on selection</button>
     </div>
 </template>

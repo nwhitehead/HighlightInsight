@@ -11,9 +11,11 @@
     "full_package": "npm run package_chrome && npm run package_firefox"
   },
   "dependencies": {
+    "@extractus/article-extractor": "^7.2.15",
     "@samrum/vite-plugin-web-extension": "^4.1.0",
     "extpay": "^3.0.7",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
