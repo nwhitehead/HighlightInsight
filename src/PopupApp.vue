@@ -36,6 +36,5 @@ async function handleClick() {
                 </label>
             </div>
         </fieldset>
-        <button class="btn-blue" @click="handleClick">Get commentary on selection</button>
     </div>
 </template>

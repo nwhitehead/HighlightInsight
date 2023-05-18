@@ -8,11 +8,24 @@
         "default_popup": "popup.html",
         "default_icon": "images/highlighter-128.png"
     },
+    "commands": {
+        "comment": {
+            "suggested-key": {
+                "default": "Ctrl-Y"
+            },
+            "description": "Get commentary on the current page"
+        }
+    },
     "icons": {
         "16": "images/highlighter-16.png",
         "32": "images/highlighter-32.png",
         "48": "images/highlighter-48.png",
         "128": "images/highlighter-128.png"
+    },
+    "sandbox": {
+        "pages": [
+            "conversation.html"
+        ]
     },
     "content_scripts": [
         {
@@ -32,11 +45,5 @@
         "ids": ["*"],
         "matches": ["<all_urls>"]
     },
-    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiVWw5Jwp9OKn2JvhoS9O
-    NvGLK3MgDWwE33OXa7XgHZJPuyXX8LUD88+MoQfQHXMqZL1JmEvN7vGCgl1hoOMG
-    r/YHYj3E/RwXsHWGPFa/jmb1qDcgfrXCCLZAIH+cpbdIfytmg/PQGn2HbIjqyfS1
-    q3lA3JHy8RMBVPFsj8Qitel4jaIRHK84W5VMqgJl3KZPtwlCpbw8UVhsamGWPQUK
-    VGV0MkuS2YashLrzFLNuvea102ucCBY/xL7mjQ7Ep0l2uNRs3a+hkZWix9ukUPHi
-    bmy5U992Jo4swyj/eg29RgGOJZLFVFviAG/njVIKdYhDKla+1PNQIo8IIAVreFSE
-    SQIDAQAB"
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiVWw5Jwp9OKn2JvhoS9ONvGLK3MgDWwE33OXa7XgHZJPuyXX8LUD88+MoQfQHXMqZL1JmEvN7vGCgl1hoOMGr/YHYj3E/RwXsHWGPFa/jmb1qDcgfrXCCLZAIH+cpbdIfytmg/PQGn2HbIjqyfS1q3lA3JHy8RMBVPFsj8Qitel4jaIRHK84W5VMqgJl3KZPtwlCpbw8UVhsamGWPQUKVGV0MkuS2YashLrzFLNuvea102ucCBY/xL7mjQ7Ep0l2uNRs3a+hkZWix9ukUPHibmy5U992Jo4swyj/eg29RgGOJZLFVFviAG/njVIKdYhDKla+1PNQIo8IIAVreFSESQIDAQAB"
 }

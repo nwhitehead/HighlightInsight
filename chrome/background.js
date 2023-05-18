@@ -31,8 +31,20 @@ chrome.runtime.onInstalled.addListener(() => {
     console.log('service worker running onInstalled callback');
     console.log('chrome.contextMenus', chrome.contextMenus);
     chrome.contextMenus.create({
-        title: "Get ChatGPT commentary",
+        title: "The Margin",
         contexts: ["all"],
-        id: "comment"
+        id: "margin_top"
+    });
+    chrome.contextMenus.create({
+        title: "Comment on selected text",
+        contexts: ["selection"],
+        parentId: "margin_top",
+        id: "margin_selection"
+    });
+    chrome.contextMenus.create({
+        title: "What is this page about?",
+        contexts: ["all"],
+        parentId: "margin_top",
+        id: "margin_about"
     });
 });
