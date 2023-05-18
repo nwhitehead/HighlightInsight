@@ -20,6 +20,12 @@ export default defineConfig({
         webExtension({ 
             manifest,
             useDynamicUrlWebAccessibleResources: false,
+            additionalInputs: {
+                html: [
+                    "conversation.html"
+                ]
+            },
+        
         }),
     ],
 })
