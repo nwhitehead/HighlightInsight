@@ -1,6 +1,6 @@
 
 import ExtPay from "extpay";
-import { configuration } from '../src/globals';
+import { configuration } from './src/globals';
 
 const client_id = 'highlight-insight';
 var extpay = ExtPay(client_id);
@@ -40,6 +40,8 @@ chrome.runtime.onInstalled.addListener(() => {
         contexts: ["selection"],
         parentId: "margin_top",
         id: "margin_selection"
+    }, (data) => {
+        console.log('Doing menu action with data', data);
     });
     chrome.contextMenus.create({
         title: "What is this page about?",
@@ -47,4 +49,8 @@ chrome.runtime.onInstalled.addListener(() => {
         parentId: "margin_top",
         id: "margin_about"
     });
+});
+
+chrome.commands.onCommand.addListener((command) => {
+    console.log('Doing command', command);
 });

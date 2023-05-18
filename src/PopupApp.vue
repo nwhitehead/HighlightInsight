@@ -32,7 +32,7 @@ async function handleClick() {
             <div class="mb-4 select-none">
                 <label>
                     <input type="checkbox" id="avatar" v-model="configuration.context" class="mr-2 leading-tight" />
-                    Include context of page in request
+                    Include context of page in the request
                 </label>
             </div>
         </fieldset>

@@ -5,13 +5,12 @@
     "description": "Ask ChatGPT about anything on the web",
     "version": "0.1",
     "action": {
-        "default_popup": "popup.html",
-        "default_icon": "images/highlighter-128.png"
+        "default_popup": "popup.html"
     },
     "commands": {
         "comment": {
-            "suggested-key": {
-                "default": "Ctrl-Y"
+            "suggested_key": {
+                "default": "Ctrl+Y"
             },
             "description": "Get commentary on the current page"
         }
@@ -25,12 +24,12 @@
     "content_scripts": [
         {
           "matches": ["<all_urls>"],
-          "js": ["chrome/index.js"],
+          "js": ["index.js"],
           "run_at": "document_start"
         }
     ],
     "background": {
-        "service_worker": "chrome/background.js",
+        "service_worker": "background.js",
         "type": "module"
     },
     "permissions": [

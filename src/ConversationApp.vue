@@ -1,5 +1,12 @@
 <script setup>
 
+import Conversation from './Conversation.vue';
+
+const dialog = [
+    { who: 'human', what: 'Hello, please tell me the summation of the numbers 1 through 10.'},
+    { who: 'gpt', what: 'Sum them yourself.'},
+];
+
 </script>
 
 <template>
@@ -8,5 +15,6 @@
             The Margin
         </h1>
         <p>Let's chat...</p>
+        <Conversation :dialog="dialog" />
     </div>
 </template>
