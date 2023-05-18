@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "HighlightInsight",
+    "name": "The Margin",
     "minimum_chrome_version": "93",
     "description": "Ask ChatGPT about anything on the web",
     "version": "0.1",
@@ -31,5 +31,12 @@
     "externally_connectable": {
         "ids": ["*"],
         "matches": ["<all_urls>"]
-    }
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiVWw5Jwp9OKn2JvhoS9O
+    NvGLK3MgDWwE33OXa7XgHZJPuyXX8LUD88+MoQfQHXMqZL1JmEvN7vGCgl1hoOMG
+    r/YHYj3E/RwXsHWGPFa/jmb1qDcgfrXCCLZAIH+cpbdIfytmg/PQGn2HbIjqyfS1
+    q3lA3JHy8RMBVPFsj8Qitel4jaIRHK84W5VMqgJl3KZPtwlCpbw8UVhsamGWPQUK
+    VGV0MkuS2YashLrzFLNuvea102ucCBY/xL7mjQ7Ep0l2uNRs3a+hkZWix9ukUPHi
+    bmy5U992Jo4swyj/eg29RgGOJZLFVFviAG/njVIKdYhDKla+1PNQIo8IIAVreFSE
+    SQIDAQAB"
 }
