@@ -40,14 +40,15 @@ chrome.runtime.onInstalled.addListener(() => {
         contexts: ["selection"],
         parentId: "margin_top",
         id: "margin_selection"
-    }, (data) => {
-        console.log('Doing menu action with data', data);
     });
     chrome.contextMenus.create({
         title: "What is this page about?",
         contexts: ["all"],
         parentId: "margin_top",
         id: "margin_about"
+    });
+    chrome.contextMenus.onClicked.addListener((info) => {
+        console.log('Context menu clicked', info);
     });
 });
 
